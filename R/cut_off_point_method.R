@@ -22,7 +22,7 @@
 #'    for further details).  Default is NA (for the traditional cut-point method).
 #' @param bout_lengths a vector object (with even number of elemets) to define the 
 #'    range of the bout intervals (see Details for the definition of bouts). For instance, 
-#'    \code{bout_lengths=c(1,1,2,2,3,10,11,20,1,20)} defines the five bout intervals 
+#'    \code{bout_lengths = c(1,1,2,2,3,10,11,20,1,20)} defines the five bout intervals 
 #'    [1,1] (1 count); [2,2] (2 counts); [3,10] (3-10 counts); [11,20] (11-20 counts); [1,20] 
 #'    (1-20 counts - overlapping with other bout intervalls is possible). 
 #'    Default value is \code{bout_lengths=NULL}.

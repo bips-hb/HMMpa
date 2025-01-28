@@ -92,7 +92,7 @@ value is \code{2} for full printing.}
 \describe{
 \item{trained_HMM_with_selected_m}{a list object containing the key data of the optimal 
      trained HMM (HMM with selected \code{m}) -- summarized output of the 
-     \code{\link{Baum_Welch_algorithm}} or \code{\link{direct_numerical_maximization}} 
+     \code{\link{Baum_Welch_algorithm}} or \cr \code{\link{direct_numerical_maximization}} 
      algorithm, respectively.}
 \item{list_of_all_initial_parameters}{a list object containing the plausible starting 
      values for all HMMs (one for each state \code{m}).}
@@ -122,7 +122,7 @@ More precisely, the function works as follows:\cr
 \bold{Step 1:}
 In a first step, the algorithm estimates the model specific parameters for different 
 values of \code{m} (indeed for \code{min_m,...,max_m}) using either the function 
-\code{\link{Baum_Welch_algorithm}} or 
+\code{\link{Baum_Welch_algorithm}} or \cr
 \code{\link{direct_numerical_maximization}}. Therefore, the function first searches for 
 plausible starting values by using the function \code{\link{initial_parameter_training}}. 
 \bold{Step 2:}

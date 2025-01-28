@@ -13,7 +13,7 @@ AIC_HMM(logL, m, k)
 
 \item{k}{single integer value representing the number of parameters of the underlying
 distribution of the observation process 
-(e.g. k=2 for the normal distribution (mean and standard deviation))#'}
+(e.g. k=2 for the normal distribution (mean and standard deviation))}
 }
 \value{
 The AIC or BIC value of the fitted hidden Markov model.

@@ -7,7 +7,7 @@
 #' @param m integer number of states in the Markov chain of the model
 #' @param k single integer value representing the number of parameters of the underlying  
 #'          distribution of the observation process 
-#'          (e.g. k=2 for the normal distribution (mean and standard deviation))#'
+#'          (e.g. k=2 for the normal distribution (mean and standard deviation))
 #' @details
 #' For a discrete-time hidden Markov model, AIC and BIC are as follows 
 #' (MacDonald & Zucchini (2009, Paragraph 6.1 and A.2.3)):

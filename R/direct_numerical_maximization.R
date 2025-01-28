@@ -61,8 +61,9 @@
 #'   (2009, Paragraph A.1). Extension and implementation by Vitali Witowski (2013).
 #'   
 #' @seealso \code{\link{HMM_based_method}}, \code{\link{HMM_training}}, 
-#'   \code{\link{Baum_Welch_algorithm}}, \code{\link{forward_backward_algorithm}},
-#'   \code{\link{initial_parameter_training}}
+#'   \code{\link{Baum_Welch_algorithm}}, 
+#'   \code{\link{forward_backward_algorithm}}, 
+#'   \code{\link{initial_parameter_training}} 
 #' @keywords ts 
 #' @export
 #'

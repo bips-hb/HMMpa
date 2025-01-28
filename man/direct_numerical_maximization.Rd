@@ -126,7 +126,8 @@ MacDonald, I. L., Zucchini, W. (2009) \emph{Hidden Markov Models for Time
 }
 \seealso{
 \code{\link{HMM_based_method}}, \code{\link{HMM_training}}, 
-  \code{\link{Baum_Welch_algorithm}}, \code{\link{forward_backward_algorithm}},
+  \code{\link{Baum_Welch_algorithm}}, 
+  \code{\link{forward_backward_algorithm}}, 
   \code{\link{initial_parameter_training}}
 }
 \author{

@@ -66,7 +66,7 @@ the global optimum.
 }
 \details{
 From our experience, parameter estimation for long time-series of observations 
-(\code{T>1000}) or observation values \code{>1500} tend to be numerical instable and 
+(\code{T>1000}) or observation values \code{>1500} tend to be numerical unstable and 
 does not necessarily find a global maximum.  Both problems can eventually be 
 diminished with plausible starting values.  Basically, the idea behind 
 \code{initial_parameter_training} is to sample randomly \code{n} sets of \code{m} 

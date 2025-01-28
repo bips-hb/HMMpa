@@ -101,7 +101,7 @@
 #' \code{\link{initial_parameter_training}}
 #' 
 #' @export
-#' @keywords ts, iteration 
+#' @keywords ts iteration 
 #'
 #' @examples
 #' x <- c(1,16,19,34,22,6,3,5,6,3,4,1,4,3,5,7,9,8,11,11,

@@ -2,51 +2,40 @@
 % Please edit documentation in R/HMMpa-package.R
 \docType{package}
 \name{HMMpa-package}
-\alias{HMMpa}
-\alias{HMMpa-package
-_PACKAGE}
 \alias{HMMpa-package}
-\title{HMMpa: Analysing Accelerometer Data Using Hidden Markov Models}
+\alias{HMMpa}
+\title{Analysing Accelerometer Data Using Hidden Markov Models}
 \description{
-Analysing time-series accelerometer data to quantify length and intensity of physical activity using hidden Markov models. It also contains the traditional cut-off point method. Witowski V, Foraita R, Pitsiladis Y, Pigeot I, Wirsik N (2014). \url{doi:10.1371/journal.pone.0114089}.
-
 This package provides functions for analyzing accelerometer output data 
 (known as a time-series of (impulse)-counts) to quantify length and intensity of 
 physical activity.
 }
 \details{
 Usually, so called \emph{activity ranges} are used to classify an activity as 
-\dQuote{sedentary}, \dQuote{moderate} and so on. \emph{Activity ranges} are separated 
+"sedentary", "moderate" and so on. \emph{Activity ranges} are separated 
 by certain thresholds (\emph{cut-off points}). The choice of these cut-off points 
 depends on different components like the subjects' age or the type of accelerometer device. 
 
 Cut-off point values and defined activity ranges are important input values of the 
 following analyzing tools provided by this package:
 
-1. \strong{Cut-off point method} (\emph{assigns an activity range to a count given its 
-total magintude}). This traditional approach assigns an activity range to each count of 
-the time-series independently of each other given its total magnitude.
+1. \strong{Cut-off point method}: Assigns an activity range to a count based on its 
+total magnitude independently of other counts.
 
-2. \strong{HMM-based method} (\emph{assigns an activity range to a count given its 
-underlying PA-level}). This approach uses a stochastic model (the hidden Markov model 
-or HMM) to identify the (Markov dependent) time-series of physical activity states 
-underlying the given time-series of accelerometer counts. In contrast to the cut-off 
-point method, this approach assigns activity ranges to the estimated PA-levels 
-corresponding to the hidden activity states, and not directly to the accelerometer counts.
+2. \strong{HMM-based method}: Assigns an activity range to a count using a stochastic 
+hidden Markov model (HMM), which identifies the physical activity states underlying 
+the given time-series.
 
-The new procedure for analyzing accelerometer data can be roughly described as follows:\cr
-First, a hidden Markov model (HMM) is trained to estimate the number \code{m} of 
-hidden physical activity states and the model specific parameters 
-(\code{delta, gamma, distribution_theta}). Then, a user-sepcified decoding algorithm 
-decodes the trained HMM to classify each accelerometer count into the \code{m} hidden 
-physical activity states.  Finally, the estimated distribution mean values (PA-levels) 
-corresponding to the hidden physical activity states are extracted and the accelerometer 
-counts are assigned by the total magnitudes of their corresponding PA-levels to given 
-physical activity ranges (e.g. "sedentary", "light", "moderate" and "vigorous") by the 
-traditional cut-off point method.
+The HMM procedure for analyzing accelerometer data can be summarized as follows:
+
+1. Train an HMM to estimate the number of hidden physical activity states (\code{m}) 
+and model parameters (\code{delta, gamma, distribution_theta}).
+
+2. Decode the trained HMM to classify accelerometer counts into \code{m} states.
+
+3. Assign activity ranges based on the total magnitudes of the corresponding states.
 }
 \examples{
-
 x <- c(1,16,19,34,22,6,3,5,6,3,4,1,4,3,5,7,9,8,11,11,
   14,16,13,11,11,10,12,19,23,25,24,23,20,21,22,22,18,7,
   5,3,4,3,2,3,4,5,4,2,1,3,4,5,4,5,3,5,6,4,3,6,4,8,9,12,
@@ -172,13 +161,13 @@ HMM_based_cut_off_point_method <-
                      distribution_class = "norm", 
                      bout_lengths = c(1,1,2,4,5,10,11,20,21,60,61,260),
                      plotting = 1)
-                     }                  
+}                  
 }
 \references{
 Witowski, V., Foraita, R., Pitsiladis, Y., Pigeot, I., Wirsik, N. (2014) Using
-   hidden Markov models to improve quantifying physical activity in accelerometer
-   data - A simulation study. PLOS ONE. \emph{9}(12), e114089.
-   \url{http://dx.doi.org/10.1371/journal.pone.0114089}
+ hidden Markov models to improve quantifying physical activity in accelerometer
+ data - A simulation study. PLOS ONE. \emph{9}(12), e114089.
+ \doi{10.1371/journal.pone.0114089}
 }
 \seealso{
 Useful links:
@@ -197,6 +186,3 @@ Authors:
 }
 
 }
-\keyword{internal}
-\keyword{iteration}
-\keyword{ts,}

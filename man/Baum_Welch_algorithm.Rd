@@ -182,4 +182,4 @@ The basic algorithm for a Poisson-HMM is provided by MacDonald & Zucchini
         Vitali Witowski (2013).
 }
 \keyword{iteration}
-\keyword{ts,}
+\keyword{ts}
