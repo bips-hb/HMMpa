@@ -6,7 +6,9 @@
 #' time points simultaneously.  See MacDonald & Zucchini (2009, Paragraph 5.3.2) 
 #' for further details.
 #'
-#' @param x 
+#' @param x a vector object containing the time-series of observations that are assumed to 
+#'          be realizations of the (hidden Markov state dependent) observation 
+#'          process of the model.
 #' @param m    a (finite) number of states in the hidden Markov chain.
 #' @param delta a vector object containing values for the marginal probability 
 #'    distribution of the \code{m} states of the Markov chain at the time point \code{t=1}.

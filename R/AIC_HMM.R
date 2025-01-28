@@ -1,4 +1,4 @@
-#' AIC and BIC Value for a Discrete Time Hidden Markov Model
+#' AIC Value for a Discrete Time Hidden Markov Model
 #' 
 #' Computes the Aikaike's information criterion and the Bayesian information criterion 
 #' for a discrete time hidden Markov model, given a time-series of observations.
@@ -25,7 +25,7 @@
 #'             Boca Raton: Chapman & Hall.
 #' @author Based on MacDonald & Zucchini (2009, Paragraph 6.1 and A.2.3). 
 #'         Implementation by Vitali Witowski (2013).     
-#' @seealso \link{HMM_training}      
+#' @seealso \code{\link{BIC_HMM}}, \code{\link{HMM_training}}      
 #'
 #' @examples
 #' x <- c(1,16,19,34,22,6,3,5,6,3,4,1,4,3,5,7,9,8,11,11,
@@ -72,13 +72,3 @@ AIC_HMM <- function(logL, m, k)
   return(foo)
 }
 
-#' @export
-BIC_HMM <- function(size, m, k, logL)  
-{ 
-  foo <- try(-2 * logL + log(size) * (m^2 + k * m - 1), silent = FALSE)
-  if (inherits(foo, "try-error")) 
-  {
-    foo <- NA
-  }
-  return(foo)
-}

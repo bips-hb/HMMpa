@@ -8,9 +8,9 @@ _PACKAGE}
 \alias{HMMpa-package}
 \title{HMMpa: Analysing Accelerometer Data Using Hidden Markov Models}
 \description{
-Analysing time-series accelerometer data to quantify length and intensity of physical activity using hidden Markov models. It also contains the traditional cut-off point method. Witowski V, Foraita R, Pitsiladis Y, Pigeot I, Wirsik N (2014) \url{doi:10.1371/journal.pone.0114089}.
+Analysing time-series accelerometer data to quantify length and intensity of physical activity using hidden Markov models. It also contains the traditional cut-off point method. Witowski V, Foraita R, Pitsiladis Y, Pigeot I, Wirsik N (2014). \url{doi:10.1371/journal.pone.0114089}.
 
-This package provides functions for analyzing accelerometer outpout data 
+This package provides functions for analyzing accelerometer output data 
 (known as a time-series of (impulse)-counts) to quantify length and intensity of 
 physical activity.
 }
@@ -30,8 +30,8 @@ the time-series independently of each other given its total magnitude.
 2. \strong{HMM-based method} (\emph{assigns an activity range to a count given its 
 underlying PA-level}). This approach uses a stochastic model (the hidden Markov model 
 or HMM) to identify the (Markov dependent) time-series of physical activity states 
-underlying the given time-series of accelerometer counts. In contrast to the cut-off p
-oint method, this approach assigns activity ranges to the estimated PA-levels 
+underlying the given time-series of accelerometer counts. In contrast to the cut-off 
+point method, this approach assigns activity ranges to the estimated PA-levels 
 corresponding to the hidden activity states, and not directly to the accelerometer counts.
 
 The new procedure for analyzing accelerometer data can be roughly described as follows:\cr

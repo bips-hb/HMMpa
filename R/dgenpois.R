@@ -1,20 +1,12 @@
 #' The Generalized Poisson Distribution
 #' 
-#' Density, distribution function and random generation function for the generalized 
-#' Poisson distribution. 
+#' Density function for the generalized Poisson distribution. 
 #' 
-#' @usage 
-#' dgenpois(x, lambda1, lambda2)
-#' pgenpois(q, lambda1, lambda2) 
-#' rgenpois(n, lambda1, lambda2)
-#'
-#' @param x a vector object of (non-negative integer) quantiles
-#' @param q a numeric value
+#' @param x a vector of (non-negative integer) quantiles
 #' @param lambda1 a single numeric value for parameter \code{lambda1} with \eqn{lambda1 > 0}
 #' @param lambda2 a single numeric value for parameter \code{lambda2} with \eqn{0 \le lamdba2 < 1}.  
 #'                When \code{lambda2=0}, the generalized Poisson distribution 
 #'                reduces to the Poisson distribution
-#' @param n number of random values to return
 #' 
 #' @details
 #' The generalized Poisson distribution has the density
@@ -32,17 +24,14 @@
 #' 
 #' @author Based on Joe and Zhu (2005). Implementation by  Vitali Witowski (2013).
 #' 
-#' @seealso \link{Distributions} for other standard distributions, 
+#' @seealso \code{\link{pgenpois}}, \code{\link{rgenpois}}; 
+#'  \link{Distributions} for other standard distributions, 
 #'  including \code{\link{dpois}} for the Poisson distribution.
 #' 
 #' @keywords distribution
 #'
 #' @return
-#'   \item{x}{a vector object of (non-negative integer) quantiles.}
-#'   \item{q}{a numeric value.}
-#'   \item{n}{number of random values to return.}
-#'   \item{lambda1}{a single numeric value for parameter \code{lambda1} with \eqn{lambda1 > 0}.}
-#'   \item{lambda2}{a single numeric value for parameter \code{lambda2} with \eqn{0 \le lamdba2 < 1}.  When \code{lambda2=0}, the generalized Poisson distribution reduces to the Poisson distribution.}
+#'  \code{\link{dgenpois}} gives the density of the generalized Poisson distribution.
 #' @export
 #'
 #' @examples
@@ -98,34 +87,4 @@ dgenpois <- function(x, lambda1, lambda2)
     a <- c(a,b)
   }
 return(a)
-}
-
-#' @export
-pgenpois <- function(q, lambda1, lambda2)
-  {
-    foo <- 0
-    for (i in 0:q) 
-    {
-      foo <- foo + dgenpois(i, lambda1 = lambda1, lambda2 = lambda2)
-    }
-    return(foo)
-  }
-
-#' @export
-rgenpois <-function(n, lambda1, lambda2)
-{
-  random_genpois <- numeric(n)
-  for (i in 1:n) 
-  {
-    temp_random_genpois <- 0
-    random_number <- runif(1)
-    kum <- dgenpois(0, lambda1 = lambda1, lambda2 = lambda2)
-    while(random_number > kum) 
-    {	
-      temp_random_genpois <- temp_random_genpois + 1
-      kum <- kum + dgenpois(temp_random_genpois, lambda1 = lambda1, lambda2 = lambda2)
-    }
-    random_genpois[i] <- temp_random_genpois
-  }
-  return(random_genpois)
 }

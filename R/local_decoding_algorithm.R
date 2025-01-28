@@ -4,14 +4,26 @@
 #' Different to the \code{\link{Viterbi_algorithm}}, this algorithm determines the most 
 #' likely hidden state for each time point seperately.
 #'
-#' @param x 
-#' @param m 
-#' @param delta 
-#' @param gamma 
-#' @param distribution_class 
-#' @param distribution_theta 
-#' @param discr_logL 
-#' @param discr_logL_eps 
+#' @param x a vector object containing the time-series of observations that are assumed to 
+#'          be realizations of the (hidden Markov state dependent) observation 
+#'          process of the model.
+#' @param m    a (finite) number of states in the hidden Markov chain.
+#' @param delta a vector object containing values for the marginal probability 
+#'    distribution of the \code{m} states of the Markov chain at the time point \code{t=1}.
+#' @param gamma  a matrix (\code{ncol=nrow=m}) containing values for the transition 
+#'    matrix of the hidden Markov chain.
+#' @param distribution_class a single character string object with the abbreviated name of 
+#'    the \code{m} observation distributions of the Markov dependent observation process.  
+#'    The following distributions are supported by this algorithm: Poisson (\code{pois}); 
+#'    generalized Poisson (\code{genpois}); normal (\code{norm}); geometric (\code{geom}).
+#' @param distribution_theta a list object containing the parameter values for the 
+#'    \code{m} observation distributions that are dependent on the hidden Markov state.
+#' @param discr_logL a logical object. It is \code{TRUE} if the discrete log-likelihood 
+#'    shall be calculated (for \code{distribution_class="norm"} instead of the general 
+#'    log-likelihood).  Default is \code{FALSE}.
+#' @param discr_logL_eps a single numerical value to approximately determine the discrete 
+#'    log-likelihood for a hidden Markov model based on nomal distributions 
+#'    (for \code{"norm"}).  The default value is \code{0.5}.
 #'
 #' @return
 #'   \item{x}{a vector object containing the time-series of observations that are assumed 

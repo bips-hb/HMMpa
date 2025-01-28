@@ -16,7 +16,9 @@ Viterbi_algorithm(
 )
 }
 \arguments{
-\item{x}{}
+\item{x}{a vector object containing the time-series of observations that are assumed to 
+be realizations of the (hidden Markov state dependent) observation 
+process of the model.}
 
 \item{m}{a (finite) number of states in the hidden Markov chain.}
 

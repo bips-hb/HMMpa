@@ -16,21 +16,33 @@ local_decoding_algorithm(
 )
 }
 \arguments{
-\item{x}{}
+\item{x}{a vector object containing the time-series of observations that are assumed to 
+be realizations of the (hidden Markov state dependent) observation 
+process of the model.}
 
-\item{m}{}
+\item{m}{a (finite) number of states in the hidden Markov chain.}
 
-\item{delta}{}
+\item{delta}{a vector object containing values for the marginal probability 
+distribution of the \code{m} states of the Markov chain at the time point \code{t=1}.}
 
-\item{gamma}{}
+\item{gamma}{a matrix (\code{ncol=nrow=m}) containing values for the transition 
+matrix of the hidden Markov chain.}
 
-\item{distribution_class}{}
+\item{distribution_class}{a single character string object with the abbreviated name of 
+the \code{m} observation distributions of the Markov dependent observation process.  
+The following distributions are supported by this algorithm: Poisson (\code{pois}); 
+generalized Poisson (\code{genpois}); normal (\code{norm}); geometric (\code{geom}).}
 
-\item{distribution_theta}{}
+\item{distribution_theta}{a list object containing the parameter values for the 
+\code{m} observation distributions that are dependent on the hidden Markov state.}
 
-\item{discr_logL}{}
+\item{discr_logL}{a logical object. It is \code{TRUE} if the discrete log-likelihood 
+shall be calculated (for \code{distribution_class="norm"} instead of the general 
+log-likelihood).  Default is \code{FALSE}.}
 
-\item{discr_logL_eps}{}
+\item{discr_logL_eps}{a single numerical value to approximately determine the discrete 
+log-likelihood for a hidden Markov model based on nomal distributions 
+(for \code{"norm"}).  The default value is \code{0.5}.}
 }
 \value{
 \item{x}{a vector object containing the time-series of observations that are assumed 
