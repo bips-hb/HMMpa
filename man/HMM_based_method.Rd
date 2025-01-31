@@ -222,7 +222,7 @@ Brachmann, B. (2011). Hidden-Markov-Modelle fuer Akzelerometerdaten.
    Witowski, V., Foraita, R., Pitsiladis, Y., Pigeot, I., Wirsik, N. (2014) Using
    hidden Markov models to improve quantifying physical activity in accelerometer
    data - A simulation study. PLOS ONE. \bold{9}(12), e114089.
-   \url{http://dx.doi.org/10.1371/journal.pone.0114089}
+   \doi{10.1371/journal.pone.0114089}
 }
 \seealso{
 \code{\link{initial_parameter_training}}, \code{\link{Baum_Welch_algorithm}},

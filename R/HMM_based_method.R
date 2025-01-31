@@ -144,7 +144,7 @@
 #'    Witowski, V., Foraita, R., Pitsiladis, Y., Pigeot, I., Wirsik, N. (2014) Using
 #'    hidden Markov models to improve quantifying physical activity in accelerometer
 #'    data - A simulation study. PLOS ONE. \bold{9}(12), e114089.
-#'    \url{http://dx.doi.org/10.1371/journal.pone.0114089}
+#'    \doi{10.1371/journal.pone.0114089}
 #'
 #' @author Vitali Witowski (2013).
 #'
