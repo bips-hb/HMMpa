@@ -1,27 +1,28 @@
-Package: HMMpa
 Type: Package
+Package: HMMpa
 Title: Analysing Accelerometer Data Using Hidden Markov Models
 Version: 1.0.2
 Date: 2025-01-27
-Description: Analysing time-series accelerometer data to quantify length and 
-             intensity of physical activity using hidden Markov models. 
-             It also contains the traditional cut-off point method.
-             Witowski V, Foraita R, Pitsiladis Y, Pigeot I, Wirsik N (2014).
-             <doi:10.1371/journal.pone.0114089>.
-Authors@R: 
-    c(person(given = "Vitali",
-             family = "Witowski",
-             role = "aut"),
-      person(given = "Foraita",
-             family = "Ronja",
-             role = c("cre", "aut"),
-             email = "foraita@leibniz-bips.de",
-             comment = c(ORCID = "0000-0003-2216-6653")))             
-Depends: R (>= 2.10.0)
-Imports: graphics, stats
+Authors@R: c(
+    person("Vitali", "Witowski", role = "aut"),
+    person("Foraita", "Ronja", , "foraita@leibniz-bips.de", role = c("cre", "aut"),
+           comment = c(ORCID = "0000-0003-2216-6653")),
+    person("Leibniz Institute for Prevention Research and Epidemiology - BIPS", , , "R@leibniz-bips.de", role = "cph",
+           comment = c(ROR = "02c22vc57"))
+  )
+Description: Analysing time-series accelerometer data to quantify length
+    and intensity of physical activity using hidden Markov models.  It
+    also contains the traditional cut-off point method.  Witowski V,
+    Foraita R, Pitsiladis Y, Pigeot I, Wirsik N (2014).
+    <doi:10.1371/journal.pone.0114089>.
+License: GPL (>= 2)
 URL: https://github.com/bips-hb/HMMpa
 BugReports: https://github.com/bips-hb/HMMpa/issues
-License: GPL (>= 2)
+Depends: 
+    R (>= 2.10.0)
+Imports: 
+    graphics,
+    stats
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
